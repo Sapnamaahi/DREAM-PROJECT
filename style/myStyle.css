@@ -2,7 +2,27 @@
     font-family: myFirstFont;
     src: url(font/tiza.ttf);
 }
-.headerlist li 
-{ 
-float: left;
+header
+{
+	font-family: myFirstFont;
+}
+.navbar-inverse
+{
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    border-color:rgba(0, 0, 255, 0) !important;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: rgb(0, 0, 0);
+}
+.headerline
+{
+	text-align: right;
+    padding: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.navbar-inverse {
+
+     background-color: blue;
+     border-color: blue;
 }
