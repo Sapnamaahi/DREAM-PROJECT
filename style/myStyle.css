@@ -6,6 +6,10 @@ header
 {
 	font-family: myFirstFont;
 }
+.navbar 
+{
+	margin-bottom: 0px;
+}
 .navbar-inverse
 {
     background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
@@ -26,3 +30,8 @@ header
      background-color: blue;
      border-color: blue;
 }
+
+  #section1 {padding-top:50px;height:542px;color: #fff; background-color: #1E88E5;}
+  #section2 {padding-top:50px;height:718px;color: #fff; background-color: #673ab7;}
+  #section3 {padding-top:50px;height:718px;color: #fff; background-color: #ff9800;}
+  #section4 {padding-top:50px;height:718px;color: #fff; background-color: #00bcd4;}
