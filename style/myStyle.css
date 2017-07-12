@@ -6,13 +6,19 @@ header
 {
 	font-family: myFirstFont;
 }
+label 
+{
+  color: black;
+}
+
 .navbar 
 {
 	margin-bottom: 0px;
 }
 .navbar-inverse
 {
-    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  background-image: radial-gradient(ellipse farthest-side at 100% 100%,#f35551 20%,#fa628b 50%,#bd1469 110%);
+ /*   background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);*/
     border-color:rgba(0, 0, 255, 0) !important;
 }
 .navbar-inverse .navbar-nav>li>a {
@@ -20,18 +26,18 @@ header
 }
 .headerline
 {
-	text-align: right;
+	 text-align: right;
     padding: 40px;
     font-size: 16px;
     font-weight: bold;
 }
 .navbar-inverse {
 
-     background-color: blue;
+     background-color: white;
      border-color: blue;
 }
 
-  #section1 {padding-top:50px;height:542px;color: #fff; background-color: #1E88E5;}
+  #section1 {padding-top:50px;height:565px;color: #fff; background-image: url("images/The-Awakening.jpg");}
   #section2 {padding-top:50px;height:718px;color: #fff; background-color: #673ab7;}
   #section3 {padding-top:50px;height:718px;color: #fff; background-color: #ff9800;}
-  #section4 {padding-top:50px;height:718px;color: #fff; background-color: #00bcd4;}
+  #section4 {padding-top:50px;height:718px;color: #fff; }

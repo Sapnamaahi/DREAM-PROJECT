@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
   <title>SSRS</title>
-  <script src="js/app.js"></script>
+  
   <link rel="stylesheet"  href="style/bootstrap.min.css">
   <link rel="stylesheet"  href="style/myStyle.css">
   <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/angular.min.js"></script>
+  <script src="js/app.js"></script>
   <script src="js/jquery-3.2.1.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
 <header>
-  	<div class="row" style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);">
+  	<div class="row" style="background-image: radial-gradient(ellipse farthest-side at 100% 100%,#f35551 20%,#fa628b 50%,#bd1469 110%);">
   		<div class="col-md-4">
-      <h1 style="text-align: center;">Sapna Srivastava</h1>
+      <h1 style="text-align: center;color: white">Sapna Srivastava</h1>
       </div>
-      <div class="col-md-8 headerline">
+      <div class="col-md-8 headerline" style="color: white;">
          WORLD'S LARGEST NON PROFITABLECOMPANY THAT SOLVE STUDENT'S PROBLEM
       </div>
 	</div>
@@ -30,15 +32,15 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#" style="color: black;">WebSiteName</a>
+      <a class="navbar-brand" href="#" style="color: white;">WebSiteName</a>
     </div>
     <div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li><a href="#section1">Section 1</a></li>
-          <li><a href="#section2">Section 2</a></li>
-          <li><a href="#section3">Section 3</a></li>
-          <li><a href="#section4">Section 4</a></li>
+          <li><a href="#section1" >Section 1</a></li>
+          <li><a href="#section2" >Section 2</a></li>
+          <li><a href="#section3" >Section 3</a></li>
+          <li><a href="#section4" >Section 4</a></li>
         </ul>
       </div>
     </div>
@@ -46,9 +48,7 @@
 </nav>
 
 <div id="section1" class="container-fluid">
-  <h1>Section 1</h1>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+ 
 </div>
 <div id="section2" class="container-fluid">
   <h1>Section 2</h1>
@@ -60,12 +60,69 @@
   <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
   <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
 </div>
-<div id="section4" class="container-fluid">
-  <h1>Section 4 Submenu 1</h1>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+
+<div id="section4" class="container-fluid" ng-controller="panel" ng-init="tab=1">
+<div class="row">
+  <div class="col-md-4">
+    <h1 style="color: black;">Contact Us</h1>
+    <h5 style="color: black;">Career Dekho ®</h5>
+    <p style="color: black;"> 103/85,Sector 10,Kumbhamarg, Pratap Nagar, Jaipur­ 302022, Rajasthan<br>
+Mobile : + 91-8952010758,  +91-9024413466<br>
+E-mail : <a href="mailto:contact@redinno.in" target="_blank">rishav.jnit@gmail.com</a><br>
+Website : <a href="www.rishav.in" target="_blank">www.rishav.in</a></p>
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1780.6631437418946!2d75.8183799756783!3d26.79773738992506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDQ3JzUxLjkiTiA3NcKwNDknMTAuMSJF!5e0!3m2!1sen!2sin!4v1467218898939" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+             
+             
+             <p>&nbsp;</p>
+  </div>
+  <div class="col-md-8">
+      <ul class="nav nav-pills">
+     <li ng-class="{active:tab ===1 }"><a href ng-click="tab=1" class="glyphicon glyphicon-plus">Sign In</a></li>
+     <li ng-class="{active:tab ===2 }"><a href ng-click="tab=2" class="glyphicon glyphicon-user">Sign Up</a></li>
+</ul>
+   <div class="panel" ng-show="tab===1">
+     <form >
+       <div class="form-group">
+         <label for="email">Email:</label>
+         <input type="email" class="form-control" name="email" placeholder="Enter email">
+       </div>
+       <div class="form-group">
+         <label for="pwd">Password:</label>
+         <input type="password" class="form-control" name="password" placeholder="Enter password">
+       </div>
+       <input type="submit" class="btn btn-default" name="signin" value="Sign In" >
+     </form>
+     <br>
+     <button type="button" class="btn btn-primary btn-block">Facebook Login</button>
+   </div>
+   <div class="panel" ng-show="tab===2">
+     <form>
+     <div class="col-md-6">
+       <div class="form-group">
+         <label for="name">Name:</label>
+         <input type="text" class="form-control" name="name" placeholder="Enter Name">
+       </div>
+     </div>
+     <div class="col-md-6">
+       <div class="form-group">
+         <label for="email">Email:</label>
+         <input type="email" class="form-control" name="email" placeholder="Enter email">
+       </div>
+     </div> 
+       <div class="form-group">
+         <label for="password">Password:</label>
+         <input type="password" class="form-control" name="password" placeholder="Enter password">
+       </div>
+       <input type="submit" class="btn btn-default" name ="signup" value="Sign Up" >
+     </form>
 </div>
 
+  </div>
+  
+</div>
 </div>
 
 </body>
